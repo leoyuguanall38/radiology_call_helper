@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:radiology_call_helper/widgets/notifications.dart';
+import 'package:radiology_call_helper/widgets/on_call_studies.dart';
+import 'package:radiology_call_helper/widgets/top_navigation_bar.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -27,7 +30,14 @@ class _HomeState extends State<Home> {
       ),
       body: Container(
         decoration: BoxDecoration(
-          color: Colors.grey[900],
+          color: Colors.grey[800],
+        ),
+        child: Column(
+          children: [
+            TopNavigationBar(),
+            OnCallStudies(),
+            Notifications(),
+          ],
         ),
       ),
       //bottomNavigationBar: BottomNavigationBar(),
