@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
         child: Column(
           children: [
             TopNavigationBar(),
-            OnCallStudies(),
+            OnCallStudies(section: selectedSection),
             Notifications(),
           ],
         ),

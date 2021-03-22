@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:radiology_call_helper/data/number_of_studies.dart';
 
 final List<String> _urgencyLevels = [
   'STAT RED',
   'STAT ORANGE',
   'STAT YELLOW',
   'NOT STAT',
+];
+
+final List<String> _urgency = [
+  'STAT_RED',
+  'STAT_ORANGE',
+  'STAT_YELLOW',
+  'NOT_STAT',
 ];
 
 final List<Color> _urgencyColors = [
@@ -15,10 +23,17 @@ final List<Color> _urgencyColors = [
 ];
 
 class OnCallStudies extends StatelessWidget {
+  final String section;
+
+  OnCallStudies({this.section});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400.0,
+      padding: EdgeInsets.symmetric(
+        vertical: 8.0,
+      ),
+      height: 300.0,
       child: ListView.builder(
         physics: ClampingScrollPhysics(),
         itemCount: _urgencyLevels.length,
@@ -33,10 +48,11 @@ class OnCallStudies extends StatelessWidget {
               _urgencyLevels[index],
               style: TextStyle(
                 color: Colors.white,
+                fontSize: 18.0,
               ),
             ),
             trailing: Text(
-              '23',
+              allSections[section][_urgency[index]].toString(),
               style: TextStyle(
                 color: _urgencyColors[index],
                 fontSize: 20.0,

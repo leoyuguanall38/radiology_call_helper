@@ -11,6 +11,8 @@ final List<String> _sections = [
   'BREAST'
 ];
 
+var selectedSection = _sections[0];
+
 class TopNavigationBar extends StatefulWidget {
   @override
   _TopNavigationBarState createState() => _TopNavigationBarState();
@@ -38,6 +40,7 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
               onTap: () {
                 setState(() {
                   _tapped = index;
+                  selectedSection = _sections[index];
                 });
               },
               child: Container(
