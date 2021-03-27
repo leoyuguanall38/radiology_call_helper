@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:radiology_call_helper/data/app_initialize_data.dart';
-import 'package:radiology_call_helper/widgets/on_call_studies.dart';
 
 final List<String> _sections = allSections;
 

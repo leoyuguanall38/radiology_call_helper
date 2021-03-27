@@ -28,12 +28,6 @@ class _OnCallStudiesState extends State<OnCallStudies> {
 
   _OnCallStudiesState(this.section);
 
-  void pickSection(String selectedSection) {
-    setState(() {
-      section = selectedSection;
-    });
-  }
-
   List<Widget> getSubtiles(int index) {
     var subtiles = <Widget>[];
     for (var i = 1; i < _urgencySublevels[_urgencyLevels[index]].length; i++) {
