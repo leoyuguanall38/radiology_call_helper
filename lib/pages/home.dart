@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:radiology_call_helper/widgets/notifications.dart';
 import 'package:radiology_call_helper/widgets/on_call_studies.dart';
 import 'package:radiology_call_helper/widgets/top_navigation_bar.dart';
+import 'package:radiology_call_helper/data/app_initialize_data.dart';
+
+var _selectedSection = selectedSection;
 
 class Home extends StatefulWidget {
   @override
@@ -10,6 +13,18 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   @override
+  void initState() {
+    super.initState();
+    initializeAllSectionsData();
+  }
+
+  void selectSection() {
+    setState(() {
+      _selectedSection = selectedSection;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -17,7 +32,7 @@ class _HomeState extends State<Home> {
         brightness: Brightness.dark,
         backgroundColor: Colors.black,
         leading: IconButton(
-          icon: const Icon(Icons.home_rounded),
+          icon: const Icon(Icons.menu_rounded),
           onPressed: () {},
         ),
         title: const Text('Radiology Call Helper'),
@@ -34,13 +49,12 @@ class _HomeState extends State<Home> {
         ),
         child: Column(
           children: [
-            TopNavigationBar(),
-            OnCallStudies(section: selectedSection),
+            TopNavigationBar(selectSection),
+            OnCallStudies(_selectedSection),
             Notifications(),
           ],
         ),
       ),
-      //bottomNavigationBar: BottomNavigationBar(),
     );
   }
 }

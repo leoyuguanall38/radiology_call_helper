@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:radiology_call_helper/data/app_initialize_data.dart';
+import 'package:radiology_call_helper/widgets/on_call_studies.dart';
 
-final List<String> _sections = [
-  'CHEST',
-  'BODY',
-  'NEURO',
-  'IR',
-  'PEDS',
-  'NUCS',
-  'MSK',
-  'BREAST'
-];
+final List<String> _sections = allSections;
 
 var selectedSection = _sections[0];
 
 class TopNavigationBar extends StatefulWidget {
+  final Function changeSection;
+
+  TopNavigationBar(this.changeSection);
+
   @override
-  _TopNavigationBarState createState() => _TopNavigationBarState();
+  _TopNavigationBarState createState() => _TopNavigationBarState(changeSection);
 }
 
 class _TopNavigationBarState extends State<TopNavigationBar> {
   int _tapped = 0;
+  Function changeSection;
+
+  _TopNavigationBarState(this.changeSection);
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +41,7 @@ class _TopNavigationBarState extends State<TopNavigationBar> {
                 setState(() {
                   _tapped = index;
                   selectedSection = _sections[index];
+                  changeSection();
                 });
               },
               child: Container(
