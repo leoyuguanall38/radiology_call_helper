@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'package:firebase_database/firebase_database.dart';
+
 final List<String> allSections = [
   'ALL',
   'CHEST',
@@ -30,6 +32,8 @@ var allSectionsData = {};
 
 void initializeAllSectionsData() {
   var random = new Random();
+  DatabaseReference _fbRef =
+      FirebaseDatabase.instance.reference().child('current snapshot');
 
   for (var i = 0; i < allSections.length; i++) {
     allSectionsData[allSections[i]] = {};
@@ -60,4 +64,5 @@ void initializeAllSectionsData() {
   }
 
   print(allSectionsData);
+  _fbRef.set(allSectionsData);
 }

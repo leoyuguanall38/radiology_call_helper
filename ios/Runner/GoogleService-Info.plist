@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>10214029503-aqcqlebt5bjp0pdoteh31r5rjs2rc07l.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.10214029503-aqcqlebt5bjp0pdoteh31r5rjs2rc07l</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAe-TeHDZs-E24fz--DbW2DcAf7o8BXkNE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>10214029503</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.radiologyCallHelper</string>
+	<key>PROJECT_ID</key>
+	<string>radiology-call-helper</string>
+	<key>STORAGE_BUCKET</key>
+	<string>radiology-call-helper.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:10214029503:ios:1d469e0fc6c77885fe6e0a</string>
+</dict>
+</plist>

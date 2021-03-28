@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "10214029503",
+    "project_id": "radiology-call-helper",
+    "storage_bucket": "radiology-call-helper.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10214029503:android:442bea917126977dfe6e0a",
+        "android_client_info": {
+          "package_name": "com.example.radiology_call_helper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10214029503-j3vvfasprs1466l5qq805iq88gu855rg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdpDeOzv9YRvfqUqXKbZRs4wFU0EKbCVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10214029503-j3vvfasprs1466l5qq805iq88gu855rg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
