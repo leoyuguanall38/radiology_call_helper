@@ -66,7 +66,7 @@ class _OnCallStudiesState extends State<OnCallStudies> {
       padding: EdgeInsets.symmetric(
         vertical: 8.0,
       ),
-      height: 600.0,
+      height: 400.0,
       child: ListView.builder(
         physics: ClampingScrollPhysics(),
         itemCount: _urgencyLevels.length,
