@@ -15,7 +15,7 @@ class NavDrawer extends StatelessWidget {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => menuItemPages['Home'],
+              builder: (context) => menuItemPages[itemTitle],
             ),
           );
         },
